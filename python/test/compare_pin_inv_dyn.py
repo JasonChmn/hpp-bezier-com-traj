@@ -9,7 +9,7 @@ from pinocchio_inv_dyn.optimization.solver_LP_abstract import LP_status, LP_stat
 from pinocchio_inv_dyn.multi_contact.stability_criterion import  Bunch
 from pinocchio_inv_dyn.optimization.solver_LP_abstract import getNewSolver
 
-from spline import bezier, bezier6, polynom, bernstein
+from curves import bezier, bezier6, polynom, bernstein
 
 from numpy import array, vstack, zeros, ones, sqrt, matrix, asmatrix, asarray, identity
 from numpy import cross as X

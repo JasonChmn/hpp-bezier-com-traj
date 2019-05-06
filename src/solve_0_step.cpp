@@ -133,7 +133,7 @@ std::vector<waypoint6_t> ComputeAllWaypoints(point_t_tC p0, point_t_tC dc0, poin
     wps.push_back(w4(p0, p1, g, p0X, p1X, gX, alpha));
     if (numSteps > 0)
     {
-        std::vector<spline::Bern<double> > berns = ComputeBersteinPolynoms(4);
+        std::vector<curves::Bern<double> > berns = ComputeBersteinPolynoms(4);
         wps = ComputeDiscretizedWaypoints(wps, berns, numSteps);
     }
     return wps;
@@ -151,7 +151,7 @@ std::vector<waypoint6_t> ComputeAllWaypointsAngularMomentum(point_t_tC l0, const
     wps.push_back(u4(l0, alpha));
     if (numSteps > 0)
     {
-        std::vector<spline::Bern<double> > berns = ComputeBersteinPolynoms(4);
+        std::vector<curves::Bern<double> > berns = ComputeBersteinPolynoms(4);
         wps = ComputeDiscretizedWaypoints(wps, berns, numSteps);
     }
     return wps;

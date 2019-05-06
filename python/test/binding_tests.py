@@ -1,6 +1,6 @@
 import numpy as np
 from hpp_centroidal_dynamics import *
-from hpp_spline import *
+from curves import *
 from numpy import array, asmatrix, matrix
 
 from hpp_bezier_com_traj import *

@@ -11,7 +11,7 @@
 #include <hpp/bezier-com-traj/definitions.hh>
 #include <hpp/bezier-com-traj/utils.hh>
 #include <hpp/bezier-com-traj/solver/solver-abstract.hpp>
-#include <hpp/spline/bezier_curve.h>
+#include <curves/bezier_curve.h>
 #include <hpp/centroidal-dynamics/centroidal_dynamics.hh>
 #include <Eigen/Dense>
 
@@ -47,13 +47,13 @@ namespace bezier_com_traj
             , kin_(VectorX::Zero(0))
             , Ang_(Eigen::Matrix3d::Zero())
             , ang_(VectorX::Zero(0)) {}
-       ~ContactData(){}
+        ~ContactData(){}
 
-       centroidal_dynamics::Equilibrium* contactPhase_;
-       MatrixX3 Kin_; // inequality kinematic constraints
-       VectorX  kin_;
-       MatrixX3 Ang_; // inequality angular momentum constraints
-       VectorX  ang_;
+        centroidal_dynamics::Equilibrium* contactPhase_;
+        MatrixX3 Kin_; // inequality kinematic constraints
+        VectorX  kin_;
+        MatrixX3 Ang_; // inequality angular momentum constraints
+        VectorX  ang_;
     };
 
     /**
